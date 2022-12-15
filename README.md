@@ -13,7 +13,7 @@ Data preparation composed of two or more mainly part which are
 | Wave files  | MFCC as image  |
 
 ## Wave read ###
-Read wave from source
+Read wave from source, we need to select number of input and process to response time and target frequency response by the audio source we create function to action to the input as mono microphone or 1024 bytes, read the input wave format they contain of wave signals and header format. Those parameters of information we extracting are from the header format, couting or mapping method working only within it scope sometime we found records extracts record as wave files failed or unrelated data because they are not create the correct header by it format ( IEEE )
 ```
 data = stream.read( CHUNK )
 audio_data = tf.io.decode_raw(tf.constant( data ), tf.int32)
@@ -21,14 +21,13 @@ audio_data = tf.round( audio_data )
 audio_data = tf.cast( audio_data, dtype=tf.float32 )
 	
 data_frames = append_data_frames( audio_data, data_frames )
-temp = extract_data_frames( data_frames )
-
-stfts = tf.signal.stft(temp, frame_length=256, frame_step=64, fft_length=256)
-spectrograms = tf.abs(stfts)
 ```
 
+## Data Cleanzing ###
+Sometimes working with samples from environment sources there are data learning interuption with Furrier transfrom and backward furrier transform can filters out unrelated data or sustain the data continuous.
+
 ## Spectrograms short-time Furrier transfroms ###
-Read wave from source
+Short-time Furrier transfroms, by frame_step or windows step and the attention length generate output from time domain to frequency domain. 
 ```
 stfts = tf.signal.stft(temp, frame_length=256, frame_step=64, fft_length=256)
 spectrograms = tf.abs(stfts)
