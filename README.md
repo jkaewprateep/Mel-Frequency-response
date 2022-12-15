@@ -1,5 +1,16 @@
 # Mel-Frequency-response
-Mel frequency response from audio source input
+Mel frequency response from audio source input, there are many application of domain transform functions because in nature we senses of some repeating information to understand or its signaturesto recognized. Computer understand it the same way as we build the program but we do not need to spend more time of the repeating information then we transfroms it by extracting important information from the wave sources and transform into new format as data preparation.
+
+Data preparation composed of two or more mainly part which are
+> 1. Data cleaning 
+> 2. Data extracting or data input information significant
+
+## Input / Output ###
+
+| Input  | Output |
+| ------------- | ------------- |
+| Wave from source  | MFCC as image  |
+| Wave files  | MFCC as image  |
 
 ## Wave read ###
 Read wave from source
