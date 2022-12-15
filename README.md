@@ -26,6 +26,12 @@ data_frames = append_data_frames( audio_data, data_frames )
 ## Data Cleanzing ###
 Sometimes working with samples from environment sources there are data learning interuption with Furrier transfrom and backward furrier transform can filters out unrelated data or sustain the data continuous.
 
+![Alt text](https://github.com/jkaewprateep/Mel-Frequency-response/blob/main/10.png?raw=true "Title")
+![Alt text](https://github.com/jkaewprateep/Mel-Frequency-response/blob/main/4.png?raw=true "Title")
+![Alt text](https://github.com/jkaewprateep/Mel-Frequency-response/blob/main/5.png?raw=true "Title")
+![Alt text](https://github.com/jkaewprateep/Mel-Frequency-response/blob/main/9.png?raw=true "Title")
+
+
 ## Spectrograms short-time Furrier transfroms ###
 Short-time Furrier transfroms, by frame_step or windows step and the attention length generate output from time domain to frequency domain. 
 ```
