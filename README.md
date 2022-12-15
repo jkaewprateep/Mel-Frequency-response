@@ -26,6 +26,9 @@ data_frames = append_data_frames( audio_data, data_frames )
 ## Data Cleanzing ###
 Sometimes working with samples from environment sources there are data learning interuption with Furrier transfrom and backward furrier transform can filters out unrelated data or sustain the data continuous. From the graph is respond to input as wave with multiple sources inputs, short-time furrier transform and inverse remain the wave lenghts data continuous that corresponse to the filters and domain. 
 
+Source input wave from hardware 'pyaudio.PyAudio()' contained of backgrounds environment and our interesting data input cleanzing is important for training model as the experiment we do not have the same backgrounds noises or data generated but expecting the same result output in the target domain. Experiment result is indicated the setup and correctness of the solution when working with random input it will not have the effects from background noises inputs as the content.
+
+
 ![Alt text](https://github.com/jkaewprateep/Mel-Frequency-response/blob/main/10.png?raw=true "Title")
 ![Alt text](https://github.com/jkaewprateep/Mel-Frequency-response/blob/main/4.png?raw=true "Title")
 ![Alt text](https://github.com/jkaewprateep/Mel-Frequency-response/blob/main/5.png?raw=true "Title")
@@ -40,7 +43,7 @@ spectrograms = tf.abs(stfts)
 ```
 
 ## Mel frequency Spectrograms ###
-Mel frequency spectrograms, weight matrix
+Mel frequency spectrograms, weight matrix, the secrete is concatenated of input create concatinated of output Mel frequency spectrums as they are windows channel or default hanning windows. You can assig a stacks of inputs into the same input matrix, concatenated data ouput without image shape extending.
 ```
 num_spectrogram_bins = stfts.shape[-1]
 lower_edge_hertz, upper_edge_hertz, num_mel_bins = 80.0, 7600.0, 80
@@ -67,4 +70,6 @@ def predict_action( image ) :
 ```
 
 ## Result image ##
+Label key target with clustering
+
 ![Alt text](https://github.com/jkaewprateep/Mel-Frequency-response/blob/main/Figure_2.png?raw=true "Title")
