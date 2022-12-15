@@ -24,7 +24,7 @@ data_frames = append_data_frames( audio_data, data_frames )
 ```
 
 ## Data Cleanzing ###
-Sometimes working with samples from environment sources there are data learning interuption with Furrier transfrom and backward furrier transform can filters out unrelated data or sustain the data continuous.
+Sometimes working with samples from environment sources there are data learning interuption with Furrier transfrom and backward furrier transform can filters out unrelated data or sustain the data continuous. From the graph is respond to input as wave with multiple sources inputs, short-time furrier transform and inverse remain the wave lenghts data continuous that corresponse to the filters and domain. 
 
 ![Alt text](https://github.com/jkaewprateep/Mel-Frequency-response/blob/main/10.png?raw=true "Title")
 ![Alt text](https://github.com/jkaewprateep/Mel-Frequency-response/blob/main/4.png?raw=true "Title")
