@@ -6,7 +6,7 @@ Data preparation composed of two or more mainly part which are
 > 2. Data extracting or data input information significant
 
 ## Input / Output ###
-
+Tensorflow model training and saved data format is easier to manage with picture format and naming that is because we also can see it and understand it easy. One way is create folder management for cataforized of them with mapping labels and description. We can use of the transfromed format to working later or continue working on the next computer deloyment.
 | Input  | Output |
 | ------------- | ------------- |
 | Wave from source  | MFCC as image  |
